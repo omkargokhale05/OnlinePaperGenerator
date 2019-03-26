@@ -77,6 +77,9 @@
         <asp:Label ID="Label1" runat="server" Text="SELECT QUESTION PATTERN"  
             style="position:absolute; top: 365px; left: 461px;" Font-Names="Algerian" 
             Font-Size="30px" Font-Underline="True" ForeColor="#000099"       ></asp:Label>
+         <asp:Label ID="Label7" runat="server" Text="&lt;a href='Pattern.aspx'&gt;Question Pattern0 &lt;/a&gt;"  
+            style="position:absolute; top: 430px; left: 598px; height: 28px; width: 429px;" Font-Names="cursive" 
+            Font-Size="22px" ForeColor="#990099"></asp:Label>
     
         <asp:Label ID="Label2" runat="server" Text="&lt;a href='Pattern1.aspx'&gt;Question Pattern1     (10*2  and 3*10)(50)  &lt;/a&gt;" 
             

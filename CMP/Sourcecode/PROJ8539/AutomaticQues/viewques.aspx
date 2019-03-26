@@ -73,10 +73,8 @@
               
                     <div class="row">
                         <h4><asp:Label ID="l2" runat="server">Subject code</asp:Label> </h4>
-                        <asp:DropDownList ID="d1" runat="server" DataSourceID="SqlDataSource1" 
-                            DataTextField="Subject_code" DataValueField="Subject_code"></asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                            ConnectionString="<%$ ConnectionStrings:AutomaticquesSystemConnectionString3 %>" 
+                        <asp:DropDownList ID="d1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Subject_code" DataValueField="Subject_code"></asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:abc %>" 
                             SelectCommand="SELECT [Subject_code] FROM [Syllabus_det]">
                         </asp:SqlDataSource>
                         <h4><asp:Label ID="l3" runat="server">Pattern</asp:Label> </h4>

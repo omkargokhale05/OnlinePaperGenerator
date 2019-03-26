@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Collections;
 using System.IO;
+using System.Configuration;
+
 public partial class Pattern5 : System.Web.UI.Page
 {
 

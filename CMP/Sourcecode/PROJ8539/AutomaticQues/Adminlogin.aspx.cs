@@ -33,13 +33,10 @@ public partial class Adminlogin : System.Web.UI.Page
         {
             uname = dr.GetValue(0).ToString();
             pwd = dr.GetValue(1).ToString();
-
-
         }
 
         if (TextBox1.Text == uname && TextBox2.Text == pwd)
         {
-
             Response.Redirect("Staffapprove.aspx");
         }
 
