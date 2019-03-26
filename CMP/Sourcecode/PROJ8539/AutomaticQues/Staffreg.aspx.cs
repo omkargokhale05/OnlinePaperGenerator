@@ -5,15 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class Staffreg : System.Web.UI.Page
 {
 
-    SqlConnection con = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
+    SqlConnection con;
 
     string strname, filename;
     protected void Page_Load(object sender, EventArgs e)
     {
+        string conn = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        con = new SqlConnection(conn);
 
         con.Open();
        string  str = "select count(*) from Staff_details";

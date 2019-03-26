@@ -10,6 +10,8 @@ using iTextSharp.text;
 using System.IO;
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
+using System.Configuration;
+
 public partial class Q2 : System.Web.UI.Page
 {
     SqlConnection conn;
@@ -20,7 +22,9 @@ public partial class Q2 : System.Web.UI.Page
     int num = 0, num1 = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
-        conn = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
+        string con = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        conn = new SqlConnection(con);
+
         string a = Session["Code"].ToString();
         l3.Text = a;
         conn.Open();

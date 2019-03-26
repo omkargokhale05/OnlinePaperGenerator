@@ -6,23 +6,24 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-
-
+using System.Configuration;
 
 public partial class Staffalloc : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
+    SqlConnection con;
 
 
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        string conn = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        con = new SqlConnection(conn);
+
         //string str = "select count(*) from employee";
         // SqlCommand com = new SqlCommand(str, con);
         //con.Open();
         //int count = Convert.ToInt16(com.ExecuteScalar()) + 1;
         //TextBox3.Text = count.ToString();
-        
+
         //con.Close(); 
     }
     protected void Button1_Click(object sender, EventArgs e)

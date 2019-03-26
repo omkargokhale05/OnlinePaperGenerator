@@ -5,15 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 public partial class Adminlogin : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
+    SqlConnection con;
     string uname, pwd;
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        string conn = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        con = new SqlConnection(conn);
     }
     protected void Button1_Click(object sender, EventArgs e)
     {

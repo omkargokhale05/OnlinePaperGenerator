@@ -6,12 +6,23 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 public partial class viewques : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
-   
+    SqlConnection con;
 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string conn = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        con = new SqlConnection(conn);
+
+        //con.Open();
+       
+
+       // con.Close();
+
+    }
     protected void Form_Load(object sender, EventArgs e)
     {
             

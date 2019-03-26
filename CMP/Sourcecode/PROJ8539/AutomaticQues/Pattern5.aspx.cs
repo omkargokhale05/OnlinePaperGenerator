@@ -12,7 +12,7 @@ public partial class Pattern5 : System.Web.UI.Page
 {
 
 
-    SqlConnection con = new SqlConnection("Data Source=EGC-PC\\SQLEXPRESS;Initial Catalog=AutomaticquesSystem;Integrated Security=True");
+    SqlConnection con;
 
     string qtype;
     static int count = 0;
@@ -25,6 +25,9 @@ public partial class Pattern5 : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        string conn = ConfigurationManager.ConnectionStrings["abc"].ConnectionString;
+        con = new SqlConnection(conn);
+
         Label29.Visible = false;
         Label30.Visible = false;
         Label31.Visible = false;
