@@ -36,7 +36,7 @@ public partial class Stafflogin : System.Web.UI.Page
         if (TextBox1.Text == Stfid && TextBox2.Text == uname  && TextBox3.Text == pwd )
         {
 
-            Response.Redirect("Staffproc.aspx");
+            Response.Redirect("pattern.aspx");
         }
 
 

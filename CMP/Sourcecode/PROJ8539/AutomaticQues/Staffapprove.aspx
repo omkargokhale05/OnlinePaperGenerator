@@ -52,7 +52,7 @@
                     <li><a href="Staffapprove.aspx">Staff Approve/Reject</a></li>
 
                      <li><a href="Staffalloc.aspx">Staff Allocation</a></li>
-                     <li><a href="viewques.aspx">View Question</a></li>
+                     <li><a href="Staffproc.aspx">View Question</a></li>
                      
 
                       <li><a href="Adminlogin.aspx">Logout</a></li>
